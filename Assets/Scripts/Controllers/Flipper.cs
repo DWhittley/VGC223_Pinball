@@ -5,8 +5,13 @@ using UnityEngine.InputSystem;
 
 public class Flipper : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject LeftFlipper;
+    [SerializeField]
+    private GameObject RightFlipper;
+
     [SerializeField] float hitStrength = 80000f;
-    [SerializeField] float dampening = 250f;
+    [SerializeField] float dampening = 2000f;
     [SerializeField] HingeJoint hingeJointLeft;
     [SerializeField] HingeJoint hingeJointRight;
     private JointSpring jointSpringReleased = new();
@@ -16,23 +21,28 @@ public class Flipper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hinge Joint Left: " + hingeJointLeft);
-        Debug.Log("Hinge Joint Right: " + hingeJointRight);
-        jointSpringPressed.spring = jointSpringReleased.spring = hitStrength;
-        jointSpringPressed.damper = jointSpringReleased.damper = dampening;
-        jointSpringPressed.targetPosition = hingeJointLeft.limits.max;
-        jointSpringReleased.targetPosition = hingeJointLeft.limits.min;
+        if (LeftFlipper != null && RightFlipper != null)
+        {
+            jointSpringPressed.spring = jointSpringReleased.spring = hitStrength;
+            jointSpringPressed.damper = jointSpringReleased.damper = dampening;
+            jointSpringPressed.targetPosition = hingeJointLeft.limits.max;
+            jointSpringReleased.targetPosition = hingeJointLeft.limits.min;
+        }
+        else
+        {
+            Debug.LogError("LeftFlipper or RightFlipper not found.");
+        }
     }
 
     private void OnLeftFlipper(InputValue value)
     {
-        Debug.Log("left flipper pressed");
+        
         leftFlipperPressed = value.isPressed;
     }
 
     private void OnRightFlipper(InputValue value) 
     {
-        Debug.Log("right flipper pressed");
+        
         rightFlipperPressed = value.isPressed;
     }
 
@@ -41,7 +51,6 @@ public class Flipper : MonoBehaviour
     {
         if(leftFlipperPressed)
         {
-            
             hingeJointLeft.spring = jointSpringPressed;
         }
         else

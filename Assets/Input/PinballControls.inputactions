@@ -25,12 +25,12 @@
                 },
                 {
                     "name": "Plunger",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "86e27d91-be48-49a9-9cd7-0cda7069ef5d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "CameraBack",

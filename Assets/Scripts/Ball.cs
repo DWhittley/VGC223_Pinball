@@ -5,14 +5,19 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     Vector2 previousPosition;
+    private Rigidbody rb;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
+    public void Shoot()
+    {
+        rb.AddForce(new Vector3(0,130,0), ForceMode.VelocityChange);
+    }
     // Update is called once per frame
     void Update()
     {

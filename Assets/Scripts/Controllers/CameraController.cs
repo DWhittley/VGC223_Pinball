@@ -12,6 +12,16 @@ public class CameraController : MonoBehaviour
         
     }
 
+    private void OnCameraBack() 
+    {
+        transform.Translate(Vector3.forward * -500f * Time.deltaTime);
+    }
+
+    private void OnCameraForward()
+    {
+        transform.Translate(Vector3.forward * 500f * Time.deltaTime);
+    }
+
     // Update is called once per frame
     void Update()
     {
