@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
     Vector2 previousPosition;
     private Rigidbody rb;
     public float bounceForce = 1000000.0f;
+    private Vector3 startPosition = new Vector3(26.7999992f, 20.7900009f, -0.8899999f);
 
 
     // Start is called before the first frame update
@@ -39,5 +40,10 @@ public class Ball : MonoBehaviour
         Vector2 speed = position - previousPosition;
         Vector2 rotation = Vector2.Perpendicular(speed);
         transform.Rotate(new Vector3(rotation.x, rotation.y, 0), -speed.magnitude * 40f, Space.World);
+
+        if(transform.position.y < 2.0f)
+        {
+            transform.position = startPosition;
+        }
     }
 }
