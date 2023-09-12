@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
 {
     Vector2 previousPosition;
     private Rigidbody rb;
+    public float bounceForce = 1000000.0f;
 
 
     // Start is called before the first frame update
@@ -18,6 +19,19 @@ public class Ball : MonoBehaviour
     {
         rb.AddForce(new Vector3(0,130,0), ForceMode.VelocityChange);
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Bumper"))
+        {
+            BumperBounce(collision.contacts[0].normal);
+        }
+    }
+
+    public void BumperBounce(Vector3 normal)
+    {
+        rb.velocity = Vector3.Reflect(rb.velocity, normal) * bounceForce;
+    }
+
     // Update is called once per frame
     void Update()
     {

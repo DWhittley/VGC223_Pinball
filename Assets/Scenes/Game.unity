@@ -683,6 +683,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 297d1e41a9967154bbca528b372a2e1a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bumper
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -732,7 +737,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295772382}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 62528591ee47b1f4eb15188daab9a112, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1974,7 +1979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919581253}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.9, y: 45.1, z: -0.89}
+  m_LocalPosition: {x: 2.8, y: 70.8, z: -0.89}
   m_LocalScale: {x: 1.8799999, y: 1.8799999, z: 1.8799999}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1993,6 +1998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b495436b6da16489f9d8fc9f58b031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceForce: 2000
 --- !u!1001 &1006626121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2086,6 +2092,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 297d1e41a9967154bbca528b372a2e1a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bumper
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2135,7 +2146,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006626123}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 62528591ee47b1f4eb15188daab9a112, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2655,6 +2666,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 297d1e41a9967154bbca528b372a2e1a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bumper
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2704,7 +2720,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431194886}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 62528591ee47b1f4eb15188daab9a112, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2945,6 +2961,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 297d1e41a9967154bbca528b372a2e1a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bumper
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2994,7 +3015,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499570658}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 62528591ee47b1f4eb15188daab9a112, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -3340,6 +3361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 297d1e41a9967154bbca528b372a2e1a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bumper
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3389,7 +3415,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875197305}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 62528591ee47b1f4eb15188daab9a112, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
