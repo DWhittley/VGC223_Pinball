@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour
 {
     private float lightValue;
     private new Light light;
+    [SerializeField] AudioSource soundCircle;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class Pickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        soundCircle.Play();
         GameController.IncreaseScore(300);
         lightValue = 12000;
 

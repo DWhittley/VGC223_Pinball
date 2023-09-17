@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Flipper : MonoBehaviour
 {
+    [SerializeField] AudioSource soundFlipper;
     [SerializeField]
     private GameObject LeftFlipper;
     [SerializeField]
@@ -36,13 +37,13 @@ public class Flipper : MonoBehaviour
 
     private void OnLeftFlipper(InputValue value)
     {
-        
+        soundFlipper.Play();
         leftFlipperPressed = value.isPressed;
     }
 
     private void OnRightFlipper(InputValue value) 
     {
-        
+        soundFlipper.Play();
         rightFlipperPressed = value.isPressed;
     }
 

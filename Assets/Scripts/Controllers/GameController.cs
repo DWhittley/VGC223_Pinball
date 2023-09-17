@@ -6,6 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] AudioSource soundPoints;
     private static int score, currentScore;
     
     [SerializeField] TextMeshProUGUI textScore;
@@ -26,12 +27,17 @@ public class GameController : MonoBehaviour
     {
         if (currentScore < score)
         {
+            soundPoints.Play();
             currentScore += (int)(1000 * Time.deltaTime);
             if (currentScore > score)
             {
                 currentScore = score;
             }
             textScore.text = currentScore.ToString("00000000");
+        }
+        else
+        {
+            soundPoints.Stop();
         }
     }
 }

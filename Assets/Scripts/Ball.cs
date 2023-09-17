@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    [SerializeField] AudioSource soundLostBall;
+    [SerializeField] AudioSource soundBumper;
+    [SerializeField] AudioSource soundSpring;
     Vector2 previousPosition;
     private Rigidbody rb;
-    public float bounceForce = 1000000.0f;
+    public float bounceForce = 2.0f;
     private Vector3 startPosition = new Vector3(26.7999992f, 20.7900009f, -0.8899999f);
 
 
@@ -18,19 +21,22 @@ public class Ball : MonoBehaviour
 
     public void Shoot()
     {
+        soundSpring.Play();
         rb.AddForce(new Vector3(0,130,0), ForceMode.VelocityChange);
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Bumper"))
         {
+            Debug.Log("ball hit bumper");
+            soundBumper.Play();
             BumperBounce(collision.contacts[0].normal);
         }
     }
 
     public void BumperBounce(Vector3 normal)
     {
-        rb.velocity = Vector3.Reflect(rb.velocity, normal) * bounceForce;
+        //rb.velocity = Vector3.Reflect(rb.velocity, normal) * bounceForce;
     }
 
     // Update is called once per frame
@@ -43,6 +49,7 @@ public class Ball : MonoBehaviour
 
         if(transform.position.y < 2.0f)
         {
+            soundLostBall.Play();
             transform.position = startPosition;
         }
     }
