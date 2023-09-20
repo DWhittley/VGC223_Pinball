@@ -9,9 +9,9 @@ public class Ball : MonoBehaviour
     [SerializeField] AudioSource soundSpring;
     Vector2 previousPosition;
     private Rigidbody rb;
-    public float bounceForce = 2.0f;
-    private Vector3 startPosition = new Vector3(26.7999992f, 20.7900009f, -0.8899999f);
-
+    public float bounceForce = 1.0f;
+    private Vector3 startPosition = new Vector3(26.6200008f, 21.1000004f, -3.42000008f);
+    
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,9 @@ public class Ball : MonoBehaviour
 
     public void BumperBounce(Vector3 normal)
     {
-        //rb.velocity = Vector3.Reflect(rb.velocity, normal) * bounceForce;
+        //Vector3 reflectedVelocity = Vector3.Reflect(rb.velocity, normal);
+        //reflectedVelocity.z = 0; // Set the z-component to zero to keep it in the x and y plane
+        //rb.velocity = reflectedVelocity * bounceForce;
     }
 
     // Update is called once per frame

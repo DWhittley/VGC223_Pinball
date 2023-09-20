@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856f9b4601dace443a8c839c25e5d224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundCircle: {fileID: 0}
 --- !u!108 &3821728904065971875
 Light:
   m_ObjectHideFlags: 0
@@ -129,11 +130,11 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105667646850296149}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9616439, g: 0.9811321, b: 0.02468249, a: 1}
   m_Intensity: 100
   m_Range: 2
   m_SpotAngle: 30

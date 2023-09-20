@@ -7,8 +7,8 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameController : MonoBehaviour
 {
     [SerializeField] AudioSource soundPoints;
-    private static int score, currentScore;
-    
+    private static int score = 0, currentScore = 0;
+
     [SerializeField] TextMeshProUGUI textScore;
 
     // Start is called before the first frame update
